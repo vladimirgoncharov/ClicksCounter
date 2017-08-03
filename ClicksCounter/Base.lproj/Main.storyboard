@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="emq-2X-7rp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="BOu-h1-4Ns">
+            <objects>
+                <navigationController storyboardIdentifier="Initial" useStoryboardIdentifierAsRestorationIdentifier="YES" id="emq-2X-7rp" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gi3-yD-dgq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Eqd-JS-hRQ" kind="relationship" relationship="rootViewController" id="Erw-vr-1h7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ljF-eF-NOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1064" y="-391"/>
+        </scene>
+        <!--КЛИКАЙ!-->
+        <scene sceneID="o1J-UO-xK7">
+            <objects>
+                <viewController storyboardIdentifier="TTIncrementView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Eqd-JS-hRQ" customClass="TTIncrementView" customModule="ClicksCounter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tUN-FZ-0wJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Nl-Qp-JLe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2N8-mQ-Hsw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63D-UE-vMj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <accessibility key="accessibilityConfiguration" identifier="IncrementButton"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="incrementActionWithSender:" destination="Eqd-JS-hRQ" eventType="touchUpInside" id="gkZ-aj-OPM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="63D-UE-vMj" firstAttribute="leading" secondItem="2N8-mQ-Hsw" secondAttribute="leading" id="ASn-bf-zPY"/>
+                            <constraint firstAttribute="trailing" secondItem="63D-UE-vMj" secondAttribute="trailing" id="AWe-IS-qXW"/>
+                            <constraint firstItem="63D-UE-vMj" firstAttribute="top" secondItem="tUN-FZ-0wJ" secondAttribute="bottom" id="Go8-be-fyv"/>
+                            <constraint firstItem="9Nl-Qp-JLe" firstAttribute="top" secondItem="63D-UE-vMj" secondAttribute="bottom" id="bZU-kf-KCW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="КЛИКАЙ!" id="py3-n9-enW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="y8G-ts-Rrr">
+                            <connections>
+                                <segue destination="jjY-hz-krR" kind="show" identifier="settings" id="DFa-wn-kPo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="incrementButton" destination="63D-UE-vMj" id="TW9-fe-9sS"/>
+                        <outlet property="settingsBarItem" destination="y8G-ts-Rrr" id="CMg-Va-w04"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mcO-Kk-KSQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-289" y="-392"/>
+        </scene>
+        <!--Настройки-->
+        <scene sceneID="hXb-zW-Nzc">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WOA-ue-3fm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="jjY-hz-krR" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="SLy-l4-HyZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="jjY-hz-krR" id="XJh-rb-7Xt"/>
+                            <outlet property="delegate" destination="jjY-hz-krR" id="vTb-1N-hf6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Настройки" id="CaM-fM-Lhb"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="503" y="-393"/>
+        </scene>
+    </scenes>
+</document>

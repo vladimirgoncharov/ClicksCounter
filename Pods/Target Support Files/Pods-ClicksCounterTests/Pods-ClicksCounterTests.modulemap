@@ -1,0 +1,6 @@
+framework module Pods_ClicksCounterTests {
+  umbrella header "Pods-ClicksCounterTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
