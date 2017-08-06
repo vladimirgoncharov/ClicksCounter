@@ -28,7 +28,9 @@ class TTIncrementPresenter: NSObject, TTIncrementPresenterProtocol {
         self.view?.setClicks(value: self.clicksCount)
     }
     
-    func viewDidLoad() {
+    func viewDidLoad() {}
+    
+    func viewWillAppear(_ animated: Bool) {
         self.view?.setClicks(value: self.clicksCount)
     }
 }

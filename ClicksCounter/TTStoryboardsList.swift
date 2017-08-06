@@ -40,7 +40,7 @@ enum AppViews: Int {
         switch self {
         case .navigation                    : return "Initial"
         case .increment                     : return "TTIncrementView"
-        case .settings                      : return ""
+        case .settings                      : return "TTSettingsView"
         }
     }
     

@@ -37,6 +37,11 @@ class TTIncrementView: UIViewController, TTIncrementViewProtocol {
         
         self.presenter.viewDidLoad()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.presenter.viewWillAppear(animated)
+    }
 
     //MARK:- actions
     @IBAction func incrementAction(sender: Any) {

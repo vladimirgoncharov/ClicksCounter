@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    lazy var appService: TTApplicationServiceProtocol = {
+    private(set) lazy var appService: TTApplicationServiceProtocol = {
         var appService = SwinjectStoryboard.defaultContainer.resolve(TTApplicationServiceProtocol.self)!
         appService.window = self.window
         return appService

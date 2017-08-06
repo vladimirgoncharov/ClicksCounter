@@ -16,3 +16,18 @@ protocol TTSettingsServiceProtocol: NSObjectProtocol {
     
     func reset()
 }
+
+extension TTSettingsServiceProtocol {
+    static var minIncrementStep: Int {
+        return TTMinValue.IncrementStep
+    }
+    static var maxIncrementStep: Int {
+        return TTMaxValue.IncrementStep
+    }
+    static var minNumberOfClicks: Int {
+        return TTMinValue.NumberOfClicks
+    }
+    static var maxNumberOfClicks: Int {
+        return TTMaxValue.NumberOfClicks
+    }
+}

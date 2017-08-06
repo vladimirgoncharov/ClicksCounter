@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		91FE5D239CBADE5B3036080F /* Pods_ClicksCounter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC40CB3CC5A1842B961A8FF4 /* Pods_ClicksCounter.framework */; };
 		99BC93E692914F51DD8E988D /* Pods_ClicksCounterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624BE03607208A0E243FDEBB /* Pods_ClicksCounterUITests.framework */; };
+		E72A6A881F37AAFC0091D275 /* TTSettingsModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72A6A871F37AAFC0091D275 /* TTSettingsModuleTests.swift */; };
+		E72A6A8A1F37AB130091D275 /* TTSettingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72A6A891F37AB130091D275 /* TTSettingsUITests.swift */; };
+		E72A6A8D1F37ABDC0091D275 /* TTLabelStepperTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72A6A8B1F37ABDC0091D275 /* TTLabelStepperTableCell.swift */; };
+		E72A6A8E1F37ABDC0091D275 /* TTLabelStepperTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72A6A8C1F37ABDC0091D275 /* TTLabelStepperTableCell.xib */; };
 		E73587651F31C039000A91E3 /* TTApplicationTestsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73587641F31C039000A91E3 /* TTApplicationTestsService.swift */; };
 		E73587691F31C0EA000A91E3 /* SwinjectStoryboard+SetupTestsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73587681F31C0EA000A91E3 /* SwinjectStoryboard+SetupTestsServices.swift */; };
 		E73587781F330D64000A91E3 /* TTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D22B321F2E20ED00CC4E8E /* TTConstants.swift */; };
@@ -31,6 +35,11 @@
 		E7B4DC151F2E8A1800990A12 /* TTBaseServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B4DC141F2E8A1800990A12 /* TTBaseServiceProtocol.swift */; };
 		E7CAACD41F30799B00F48184 /* TTApplicationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CAACD31F30799B00F48184 /* TTApplicationServiceProtocol.swift */; };
 		E7CAACD61F307A6300F48184 /* TTApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CAACD51F307A6200F48184 /* TTApplicationService.swift */; };
+		E7D015C11F3747980027EBEC /* TTSettingsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D015C01F3747980027EBEC /* TTSettingsViewProtocol.swift */; };
+		E7D015C31F3747B80027EBEC /* TTSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D015C21F3747B80027EBEC /* TTSettingsView.swift */; };
+		E7D015C71F3747EA0027EBEC /* TTSettingsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D015C61F3747EA0027EBEC /* TTSettingsPresenterProtocol.swift */; };
+		E7D015C91F37481E0027EBEC /* TTSettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D015C81F37481E0027EBEC /* TTSettingsPresenter.swift */; };
+		E7D015CC1F37496B0027EBEC /* TTSettingsDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D015CB1F37496B0027EBEC /* TTSettingsDisplayManager.swift */; };
 		E7D22AE51F2E0E9C00CC4E8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D22AE41F2E0E9C00CC4E8E /* AppDelegate.swift */; };
 		E7D22AEC1F2E0E9C00CC4E8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7D22AEA1F2E0E9C00CC4E8E /* Main.storyboard */; };
 		E7D22AEE1F2E0E9C00CC4E8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7D22AED1F2E0E9C00CC4E8E /* Assets.xcassets */; };
@@ -77,6 +86,10 @@
 		8DC677D93B294319E99283C0 /* Pods-ClicksCounter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClicksCounter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClicksCounter/Pods-ClicksCounter.debug.xcconfig"; sourceTree = "<group>"; };
 		BC40CB3CC5A1842B961A8FF4 /* Pods_ClicksCounter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClicksCounter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB558C85576B40ABA49C6971 /* Pods-ClicksCounter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClicksCounter.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClicksCounter/Pods-ClicksCounter.release.xcconfig"; sourceTree = "<group>"; };
+		E72A6A871F37AAFC0091D275 /* TTSettingsModuleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTSettingsModuleTests.swift; sourceTree = "<group>"; };
+		E72A6A891F37AB130091D275 /* TTSettingsUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTSettingsUITests.swift; sourceTree = "<group>"; };
+		E72A6A8B1F37ABDC0091D275 /* TTLabelStepperTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTLabelStepperTableCell.swift; sourceTree = "<group>"; };
+		E72A6A8C1F37ABDC0091D275 /* TTLabelStepperTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTLabelStepperTableCell.xib; sourceTree = "<group>"; };
 		E73587641F31C039000A91E3 /* TTApplicationTestsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTApplicationTestsService.swift; sourceTree = "<group>"; };
 		E73587681F31C0EA000A91E3 /* SwinjectStoryboard+SetupTestsServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+SetupTestsServices.swift"; sourceTree = "<group>"; };
 		E738CCB81F2F3CEF00BC44CC /* TTStoryboardsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTStoryboardsList.swift; sourceTree = "<group>"; };
@@ -98,6 +111,11 @@
 		E7B4DC141F2E8A1800990A12 /* TTBaseServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTBaseServiceProtocol.swift; sourceTree = "<group>"; };
 		E7CAACD31F30799B00F48184 /* TTApplicationServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTApplicationServiceProtocol.swift; sourceTree = "<group>"; };
 		E7CAACD51F307A6200F48184 /* TTApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTApplicationService.swift; sourceTree = "<group>"; };
+		E7D015C01F3747980027EBEC /* TTSettingsViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTSettingsViewProtocol.swift; sourceTree = "<group>"; };
+		E7D015C21F3747B80027EBEC /* TTSettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTSettingsView.swift; sourceTree = "<group>"; };
+		E7D015C61F3747EA0027EBEC /* TTSettingsPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTSettingsPresenterProtocol.swift; sourceTree = "<group>"; };
+		E7D015C81F37481E0027EBEC /* TTSettingsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTSettingsPresenter.swift; sourceTree = "<group>"; };
+		E7D015CB1F37496B0027EBEC /* TTSettingsDisplayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTSettingsDisplayManager.swift; sourceTree = "<group>"; };
 		E7D22AE11F2E0E9C00CC4E8E /* ClicksCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClicksCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7D22AE41F2E0E9C00CC4E8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7D22AEB1F2E0E9C00CC4E8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -173,6 +191,31 @@
 				3CEBA949ABF94E27EC05FF2D /* Pods-ClicksCounterUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E72A6A851F37AABC0091D275 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E72A6A891F37AB130091D275 /* TTSettingsUITests.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		E72A6A861F37AACE0091D275 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E72A6A871F37AAFC0091D275 /* TTSettingsModuleTests.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		E72A6A8F1F37ABE50091D275 /* LabelStepper */ = {
+			isa = PBXGroup;
+			children = (
+				E72A6A8B1F37ABDC0091D275 /* TTLabelStepperTableCell.swift */,
+				E72A6A8C1F37ABDC0091D275 /* TTLabelStepperTableCell.xib */,
+			);
+			name = LabelStepper;
 			sourceTree = "<group>";
 		};
 		E73587631F31C01D000A91E3 /* ApplicationLayerTests */ = {
@@ -259,6 +302,7 @@
 			children = (
 				E7FA4FB91F2F32FF0091F04F /* TTBaseModuleUIProtocol.swift */,
 				E735876A1F32FE67000A91E3 /* Increment */,
+				E72A6A851F37AABC0091D275 /* Settings */,
 			);
 			name = "UI modules";
 			sourceTree = "<group>";
@@ -285,17 +329,18 @@
 			isa = PBXGroup;
 			children = (
 				E73C213B1F2F11AF002E01D0 /* TTBaseModuleProtocol.swift */,
-				E7B4DC111F2E896600990A12 /* Click module */,
+				E7B4DC111F2E896600990A12 /* Increment */,
+				E72A6A861F37AACE0091D275 /* Settings */,
 			);
 			name = PresentationLayerTests;
 			sourceTree = "<group>";
 		};
-		E7B4DC111F2E896600990A12 /* Click module */ = {
+		E7B4DC111F2E896600990A12 /* Increment */ = {
 			isa = PBXGroup;
 			children = (
 				E7B4DC121F2E898900990A12 /* TTIncrementModuleTests.swift */,
 			);
-			name = "Click module";
+			name = Increment;
 			sourceTree = "<group>";
 		};
 		E7CAACD21F30797000F48184 /* ApplicationService */ = {
@@ -305,6 +350,33 @@
 				E7CAACD51F307A6200F48184 /* TTApplicationService.swift */,
 			);
 			name = ApplicationService;
+			sourceTree = "<group>";
+		};
+		E7D015C41F3747BF0027EBEC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E7D015CB1F37496B0027EBEC /* TTSettingsDisplayManager.swift */,
+				E7D015C01F3747980027EBEC /* TTSettingsViewProtocol.swift */,
+				E7D015C21F3747B80027EBEC /* TTSettingsView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E7D015C51F3747CA0027EBEC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E7D015C61F3747EA0027EBEC /* TTSettingsPresenterProtocol.swift */,
+				E7D015C81F37481E0027EBEC /* TTSettingsPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		E7D015CD1F374AE90027EBEC /* Table cells */ = {
+			isa = PBXGroup;
+			children = (
+				E72A6A8F1F37ABE50091D275 /* LabelStepper */,
+			);
+			name = "Table cells";
 			sourceTree = "<group>";
 		};
 		E7D22AD81F2E0E9C00CC4E8E = {
@@ -407,7 +479,7 @@
 		E7D22B181F2E102100CC4E8E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E7D22B341F2E218F00CC4E8E /* Settings */,
+				E7D22B2C1F2E1C1300CC4E8E /* TTSettings.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -415,6 +487,7 @@
 		E7D22B191F2E103500CC4E8E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E7D015CD1F374AE90027EBEC /* Table cells */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -450,6 +523,8 @@
 		E7D22B1D1F2E12F200CC4E8E /* Settings module */ = {
 			isa = PBXGroup;
 			children = (
+				E7D015C41F3747BF0027EBEC /* View */,
+				E7D015C51F3747CA0027EBEC /* Presenter */,
 			);
 			name = "Settings module";
 			sourceTree = "<group>";
@@ -480,14 +555,6 @@
 				E7B4DC0A1F2E7ED600990A12 /* SwinjectStoryboard+SetupModules.swift */,
 			);
 			name = Assemblies;
-			sourceTree = "<group>";
-		};
-		E7D22B341F2E218F00CC4E8E /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				E7D22B2C1F2E1C1300CC4E8E /* TTSettings.swift */,
-			);
-			name = Settings;
 			sourceTree = "<group>";
 		};
 		E7D22B391F2E360300CC4E8E /* SettingsService */ = {
@@ -618,6 +685,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7D22AF11F2E0E9C00CC4E8E /* LaunchScreen.storyboard in Resources */,
+				E72A6A8E1F37ABDC0091D275 /* TTLabelStepperTableCell.xib in Resources */,
 				E7D22AEE1F2E0E9C00CC4E8E /* Assets.xcassets in Resources */,
 				E7D22AEC1F2E0E9C00CC4E8E /* Main.storyboard in Resources */,
 			);
@@ -785,6 +853,7 @@
 				E74671EB1F3317DB0040E583 /* TTModulePresenter.swift in Sources */,
 				E7D22B2D1F2E1C1300CC4E8E /* TTSettings.swift in Sources */,
 				E7B4DC091F2E7EC700990A12 /* SwinjectStoryboard+SetupServices.swift in Sources */,
+				E7D015C91F37481E0027EBEC /* TTSettingsPresenter.swift in Sources */,
 				E7B4DBFB1F2E5FB900990A12 /* TTHelpers.swift in Sources */,
 				E7D22B381F2E324300CC4E8E /* SwinjectStoryboard+Setup.swift in Sources */,
 				E7D22B3B1F2E362800CC4E8E /* TTSettingsServiceProtocol.swift in Sources */,
@@ -793,17 +862,22 @@
 				E7D22B211F2E168100CC4E8E /* TTIncrementPresenter.swift in Sources */,
 				E7D22B3D1F2E367500CC4E8E /* TTSettingsService.swift in Sources */,
 				E7D22B1F1F2E138900CC4E8E /* TTIncrementView.swift in Sources */,
+				E7D015C31F3747B80027EBEC /* TTSettingsView.swift in Sources */,
+				E7D015CC1F37496B0027EBEC /* TTSettingsDisplayManager.swift in Sources */,
 				E7CAACD61F307A6300F48184 /* TTApplicationService.swift in Sources */,
+				E7D015C71F3747EA0027EBEC /* TTSettingsPresenterProtocol.swift in Sources */,
 				E7D22B311F2E1E9100CC4E8E /* TTUserDefaultsStoreService.swift in Sources */,
 				E7B4DC031F2E7B1300990A12 /* TTIncrementViewProtocol.swift in Sources */,
 				E7D22B251F2E16F200CC4E8E /* TTStoreServiceProtocol.swift in Sources */,
 				E7B4DC0B1F2E7ED600990A12 /* SwinjectStoryboard+SetupModules.swift in Sources */,
 				E738CCB91F2F3CEF00BC44CC /* TTStoryboardsList.swift in Sources */,
+				E7D015C11F3747980027EBEC /* TTSettingsViewProtocol.swift in Sources */,
 				E7CAACD41F30799B00F48184 /* TTApplicationServiceProtocol.swift in Sources */,
 				E7D22B331F2E20ED00CC4E8E /* TTConstants.swift in Sources */,
 				E7D22B271F2E173600CC4E8E /* TTClicksCounterServiceProtocol.swift in Sources */,
 				E74671E91F3317D00040E583 /* TTModulePresenterProtocol.swift in Sources */,
 				E7D22B361F2E309800CC4E8E /* TTClicksCounterService.swift in Sources */,
+				E72A6A8D1F37ABDC0091D275 /* TTLabelStepperTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -811,6 +885,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E72A6A881F37AAFC0091D275 /* TTSettingsModuleTests.swift in Sources */,
 				E73587651F31C039000A91E3 /* TTApplicationTestsService.swift in Sources */,
 				E73587691F31C0EA000A91E3 /* SwinjectStoryboard+SetupTestsServices.swift in Sources */,
 				E73C213C1F2F11AF002E01D0 /* TTBaseModuleProtocol.swift in Sources */,
@@ -827,6 +902,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7FA4FBA1F2F32FF0091F04F /* TTBaseModuleUIProtocol.swift in Sources */,
+				E72A6A8A1F37AB130091D275 /* TTSettingsUITests.swift in Sources */,
 				E73587781F330D64000A91E3 /* TTConstants.swift in Sources */,
 				E73587791F330D64000A91E3 /* TTStoryboardsList.swift in Sources */,
 				E7FA4FB81F2F2D610091F04F /* UITestHelpers.swift in Sources */,
