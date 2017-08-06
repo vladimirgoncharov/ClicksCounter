@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -60,7 +61,7 @@
                     <navigationItem key="navigationItem" title="КЛИКАЙ!" id="py3-n9-enW">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="y8G-ts-Rrr">
                             <connections>
-                                <segue destination="jjY-hz-krR" kind="show" identifier="settings" id="DFa-wn-kPo"/>
+                                <segue destination="cSr-GR-c6C" kind="show" identifier="settingsSegue" id="1qg-wa-WSY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -73,24 +74,52 @@
             </objects>
             <point key="canvasLocation" x="-289" y="-392"/>
         </scene>
-        <!--Настройки-->
-        <scene sceneID="hXb-zW-Nzc">
+        <!--Settings View-->
+        <scene sceneID="d9s-ic-T0i">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WOA-ue-3fm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="jjY-hz-krR" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="SLy-l4-HyZ">
+                <viewController storyboardIdentifier="TTSettingsView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cSr-GR-c6C" customClass="TTSettingsView" customModule="ClicksCounter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OGn-jN-62T"/>
+                        <viewControllerLayoutGuide type="bottom" id="3JL-83-EVm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uh7-8e-Piu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="i9x-ST-gKe">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="dataSource" destination="jjY-hz-krR" id="XJh-rb-7Xt"/>
-                            <outlet property="delegate" destination="jjY-hz-krR" id="vTb-1N-hf6"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Настройки" id="CaM-fM-Lhb"/>
-                </tableViewController>
+                        <constraints>
+                            <constraint firstItem="3JL-83-EVm" firstAttribute="top" secondItem="i9x-ST-gKe" secondAttribute="bottom" id="DMR-83-1fH"/>
+                            <constraint firstItem="i9x-ST-gKe" firstAttribute="top" secondItem="Uh7-8e-Piu" secondAttribute="top" id="NXa-i7-iAk"/>
+                            <constraint firstAttribute="trailing" secondItem="i9x-ST-gKe" secondAttribute="trailing" id="UTC-Bf-cvr"/>
+                            <constraint firstItem="i9x-ST-gKe" firstAttribute="leading" secondItem="Uh7-8e-Piu" secondAttribute="leading" id="lnp-xq-DNx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="heT-Kb-gNa">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Сохранить" id="3FM-91-n3t">
+                                <connections>
+                                    <action selector="saveSettingsActionWithSender:" destination="cSr-GR-c6C" id="niJ-6u-zFA"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Сбросить" id="U9U-7l-YmT">
+                                <connections>
+                                    <action selector="resetActionWithSender:" destination="cSr-GR-c6C" id="z01-tc-2NZ"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="i9x-ST-gKe" id="F8N-hQ-FTg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yEg-ga-g7L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="503" y="-393"/>
+            <point key="canvasLocation" x="541.60000000000002" y="-392.65367316341832"/>
         </scene>
     </scenes>
 </document>

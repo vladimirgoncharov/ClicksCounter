@@ -15,6 +15,7 @@ protocol TTIncrementPresenterProtocol: NSObjectProtocol {
     var clicksCount: Int { get }
     
     func viewDidLoad()
+    func viewWillAppear(_ animated: Bool)
     
     func incrementClicksCount()
 }

@@ -18,5 +18,6 @@ extension SwinjectStoryboard {
         self.setupClicksCounterService()
         
         self.setupIncrementModule()
+        self.setupSettingsModule()
     }
 }

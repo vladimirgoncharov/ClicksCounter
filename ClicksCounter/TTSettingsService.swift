@@ -23,8 +23,8 @@ class TTSettingsService: NSObject, TTSettingsServiceProtocol {
         }
         set {
             var newValue = newValue
-            newValue = max(newValue, TTMinValue.IncrementStep)
-            newValue = min(newValue, TTMaxValue.IncrementStep)
+            newValue = max(newValue, type(of: self).minIncrementStep)
+            newValue = min(newValue, type(of: self).maxIncrementStep)
             self.settings.incrementStep = newValue
             self.save()
         }
@@ -35,8 +35,8 @@ class TTSettingsService: NSObject, TTSettingsServiceProtocol {
         }
         set {
             var newValue = newValue
-            newValue = max(newValue, TTMinValue.NumberOfClicks)
-            newValue = min(newValue, TTMaxValue.NumberOfClicks)
+            newValue = max(newValue, type(of: self).minNumberOfClicks)
+            newValue = min(newValue, type(of: self).maxNumberOfClicks)
             self.settings.maxNumberOfClicks = newValue
             self.save()
         }
