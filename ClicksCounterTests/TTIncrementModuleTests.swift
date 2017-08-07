@@ -15,6 +15,7 @@ class TTIncrementModuleTests: XCTestCase, TTBaseModuleProtocol {
     typealias View = TTIncrementView
     
     var view: View!
+    var modulePresenter: TTModulePresenterProtocol!
     
     //MARK:-
     override func setUp() {

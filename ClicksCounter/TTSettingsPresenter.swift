@@ -9,25 +9,31 @@
 import UIKit
 
 //MARK:-
+/// The container for
 class TTSettingsDisplayManagerStepperCellData: TTSettingsDisplayManagerCellDataProtocol {
     
+    //MARK:- TTSettingsDisplayManagerCellDataProtocol
     let identifier: String
     var type: TTSettingsDisplayManager.CellType {
         return .stepper
     }
     
-    let leftText: String
+    /// Description of the value
+    let title: String
+    /// Current stepper value
     fileprivate(set) var value: Double
+    /// Minimal stepper value
     let minValue: Double
+    /// Maximum stepper value
     let maxValue: Double
     
     init(identifier: String,
-         leftText: String,
+         title: String,
          value: Double,
          minValue: Double,
          maxValue: Double) {
         self.identifier = identifier
-        self.leftText = leftText
+        self.title = title
         self.value = value
         self.minValue = minValue
         self.maxValue = maxValue
@@ -40,18 +46,19 @@ class TTSettingsPresenter: NSObject, TTSettingsPresenterProtocol {
     
     fileprivate(set) var clicksCounterService: TTClicksCounterServiceProtocol
     
+    /// List of settings
     fileprivate lazy var cellData: [TTSettingsDisplayManagerCellDataProtocol] = {[unowned self] in
         return [
             TTSettingsDisplayManagerStepperCellData(
                 identifier: CellIdentifier.incrementStep,
-                leftText: "Шаг инкрементирования (мин. \(type(of: self.clicksCounterService.settingsService).minIncrementStep) и макс. \(type(of: self.clicksCounterService.settingsService).maxIncrementStep))",
+                title: "Шаг инкрементирования (мин. \(type(of: self.clicksCounterService.settingsService).minIncrementStep) и макс. \(type(of: self.clicksCounterService.settingsService).maxIncrementStep))",
                 value: Double(self.clicksCounterService.settingsService.incrementStep),
                 minValue: Double(type(of: self.clicksCounterService.settingsService).minIncrementStep),
                 maxValue: Double(type(of: self.clicksCounterService.settingsService).maxIncrementStep)
             ),
             TTSettingsDisplayManagerStepperCellData(
                 identifier: CellIdentifier.maxNumberOfClicks,
-                leftText: "Максимальное число инкремента (мин. \(type(of: self.clicksCounterService.settingsService).minNumberOfClicks) и макс. \(type(of: self.clicksCounterService.settingsService).maxNumberOfClicks))",
+                title: "Максимальное число инкремента (мин. \(type(of: self.clicksCounterService.settingsService).minNumberOfClicks) и макс. \(type(of: self.clicksCounterService.settingsService).maxNumberOfClicks))",
                 value: Double(self.clicksCounterService.settingsService.maxNumberOfClicks),
                 minValue: Double(type(of: self.clicksCounterService.settingsService).minNumberOfClicks),
                 maxValue: Double(type(of: self.clicksCounterService.settingsService).maxNumberOfClicks)

@@ -12,6 +12,7 @@ import SwinjectStoryboard
 
 extension SwinjectStoryboard {
     
+    /// Setup DI for TTApplicationServiceProtocol
     class func setupApplicationService() {
         self.defaultContainer.register(TTApplicationServiceProtocol.self) { r in
             let modulePresenter = r.resolve(TTModulePresenterProtocol.self)!

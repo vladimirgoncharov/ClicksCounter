@@ -26,7 +26,8 @@ enum TTMaxValue {
     static let NumberOfClicks      = 100000000
 }
 
-//MARK:- Tests
+//MARK:-
+/// Supported launch enviroments for the application
 enum TTLaunchEnvironmentKey {
     static let StartStoryboard              = "__startStoryboardScreen__"   //value is String
     

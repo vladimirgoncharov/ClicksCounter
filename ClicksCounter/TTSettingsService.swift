@@ -59,6 +59,7 @@ class TTSettingsService: NSObject, TTSettingsServiceProtocol {
 
 //MARK:- Private
 fileprivate extension TTSettingsService {
+    /// Internal save method
     func save() {
         do {
            try self.storeService.save(settings: self.settings)

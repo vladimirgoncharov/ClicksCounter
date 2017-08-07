@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Display stepper with value. Use for integer or fractional value.
 class TTLabelStepperTableCell: UITableViewCell {
 
     //MARK:- UI
@@ -15,6 +16,8 @@ class TTLabelStepperTableCell: UITableViewCell {
     @IBOutlet weak var stepper: UIStepper!
     @IBOutlet weak var valueLabel: UILabel!
     
+    //MARK:- input value
+    /// The block will be called when user clicked on stepper 
     var valueDidChange: ((_ cell: TTLabelStepperTableCell, _ value: Double) -> Void)?
     
     //MARK: -
@@ -23,6 +26,7 @@ class TTLabelStepperTableCell: UITableViewCell {
         self.prepareForReuse()
     }
     
+    /// Prepares a reusable cell for reuse by the table view's delegate.
     override func prepareForReuse() {
         super.prepareForReuse()
         
@@ -38,6 +42,7 @@ class TTLabelStepperTableCell: UITableViewCell {
     }
     
     //MARK: - actions
+    /// User has been clicked on stepper (+ or -)
     @IBAction func valueDidChange(sender: UIStepper) {
         if sender == self.stepper {
             self.valueDidChange?(self, sender.value)

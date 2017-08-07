@@ -10,6 +10,10 @@ import UIKit
 //MARK:- RawRepresentable as Int
 extension RawRepresentable where Self.RawValue == Int {
     
+    /// Return all available enums. The enum values must be consistent
+    ///
+    /// - Parameter startIndex: Value of the first element of enum
+    /// - Returns: The list of enums
     static func allCases(_ startIndex: Int = 0) -> [Self] {
         var i = startIndex
         return Array( AnyIterator {
@@ -32,7 +36,6 @@ protocol CellProtocol {
 }
 
 extension CellProtocol {
-
     var identifier: String {
         return String(describing: self.cellClass)
     }

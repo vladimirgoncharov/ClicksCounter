@@ -10,7 +10,6 @@ import XCTest
 
 @available(iOS 9, *)
 extension XCUIApplication {
-    
     func launchWithTestEnvironment(env: [String : String] = ProcessInfo.processInfo.environment) {
         self.launchEnvironment = env
         self.launch()
@@ -18,7 +17,7 @@ extension XCUIApplication {
 }
 
 extension XCUIApplication {
-    
+    /// Simulate tap on back button of visible navigation bar
     func clickBackButtonItem() {
         self.navigationBars.buttons.element(boundBy: 0).tap()
     }

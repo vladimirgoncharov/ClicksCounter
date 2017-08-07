@@ -8,8 +8,12 @@
 
 import UIKit
 
+/// Protocol for implementation Settings UIViewController
 protocol TTSettingsViewProtocol: NSObjectProtocol, UITableViewDelegate {
     var presenter: TTSettingsPresenterProtocol! { get set }
     
+    /// Display in table view the cell data
+    ///
+    /// - Parameter cellData: The list of the cells
     func presentSettings(cellData: [TTSettingsDisplayManagerCellDataProtocol])
 }
