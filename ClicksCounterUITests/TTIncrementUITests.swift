@@ -27,11 +27,15 @@ class TTIncrementUITests: XCTestCase, TTBaseModuleUIProtocol {
     
     //MARK: - tests
     func testIncrement() {
-        self.application.buttons["IncrementButton"].tap()
+        let button = self.application.buttons["IncrementButton"]
+        let value = button.label
+        button.tap()
+        let newValue = button.label
+        XCTAssert(value != newValue, "Increment value not incremented")
     }
     
     func testGoToSettingsModuleAndBack() {
         self.application.buttons["SettingsBarItem"].tap()
-        self.application.navigationBars["ClicksCounter.TTSettingsView"].buttons["КЛИКАЙ!"].tap()
+        self.application.clickBackButtonItem()
     }
 }

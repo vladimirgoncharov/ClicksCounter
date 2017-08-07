@@ -26,28 +26,22 @@ class TTSettingsUITests: XCTestCase, TTBaseModuleUIProtocol {
     }
     
     //MARK: - tests
-    func testSettingsUI() {
-        self.application.navigationBars["КЛИКАЙ!"].buttons["SettingsBarItem"].tap()
-        
-        let clickscounterTtsettingsviewNavigationBar = self.application.navigationBars["ClicksCounter.TTSettingsView"]
-        
-        let tablesQuery = self.application.tables
-        tablesQuery.cells.containing(.staticText, identifier:"Шаг инкрементирования (мин. 1 и макс. 100000000)").buttons["Increment"].tap()
-        
-        let cellsQuery = tablesQuery.cells.containing(.staticText, identifier:"Шаг инкрементирования (мин. 1 и макс. 100000000)")
-        cellsQuery.buttons["Increment"].tap()
-        tablesQuery.cells.containing(.staticText, identifier:"Шаг инкрементирования (мин. 1 и макс. 100000000)").buttons["Decrement"].tap()
-        cellsQuery.buttons["Decrement"].tap()
-        
-        let cellsQuery2 = tablesQuery.cells.containing(.staticText, identifier:"Максимальное число инкремента (мин. 1 и макс. 100000000)")
-        cellsQuery2.buttons["Increment"].tap()
-        tablesQuery.cells.containing(.staticText, identifier:"Максимальное число инкремента (мин. 1 и макс. 100000000)").buttons["Decrement"].tap()
-        cellsQuery2.buttons["Decrement"].tap()
-        
-        clickscounterTtsettingsviewNavigationBar.buttons["Сбросить"].tap()
-        clickscounterTtsettingsviewNavigationBar.buttons["Сохранить"].tap()
-        clickscounterTtsettingsviewNavigationBar.buttons["КЛИКАЙ!"].tap()
-        
+    func testReset() {
+        self.application.buttons["IncrementButton"].tap()
+        self.application.buttons["SettingsBarItem"].tap()
+        self.application.buttons["ResetBarItem"].tap()
+        self.application.clickBackButtonItem()
+        XCTAssert(Int(self.application.buttons["IncrementButton"].label) == TTDefaultValue.NumberOfClicks, "Increment value not reset")
     }
     
+    func testSave() {
+        self.application.buttons["SettingsBarItem"].tap()
+        self.application.buttons["SaveBarItem"].tap()
+    }
+    
+    func testTableBehavior() {
+        self.application.buttons["SettingsBarItem"].tap()
+        self.application.tables.cells.containing(.staticText, identifier:"Шаг инкрементирования (мин. 1 и макс. 100000000)").buttons["Increment"].tap()
+         self.application.tables.cells.containing(.staticText, identifier:"Шаг инкрементирования (мин. 1 и макс. 100000000)").buttons["Decrement"].tap()
+    }
 }

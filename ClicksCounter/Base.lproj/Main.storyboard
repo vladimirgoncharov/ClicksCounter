@@ -114,6 +114,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="resetBarItem" destination="U9U-7l-YmT" id="NmJ-fV-f2k"/>
+                        <outlet property="saveBarItem" destination="3FM-91-n3t" id="aSw-sJ-RXb"/>
                         <outlet property="tableView" destination="i9x-ST-gKe" id="F8N-hQ-FTg"/>
                     </connections>
                 </viewController>

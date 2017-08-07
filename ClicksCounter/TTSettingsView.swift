@@ -11,6 +11,8 @@ import UIKit
 class TTSettingsView: UIViewController, TTSettingsViewProtocol, TTSettingsDisplayManagerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var resetBarItem: UIBarButtonItem!
+    @IBOutlet weak var saveBarItem: UIBarButtonItem!
     
     var presenter: TTSettingsPresenterProtocol! {
         willSet {
@@ -29,6 +31,9 @@ class TTSettingsView: UIViewController, TTSettingsViewProtocol, TTSettingsDispla
     //MARK:- life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.resetBarItem.accessibilityIdentifier = "ResetBarItem"
+        self.saveBarItem.accessibilityIdentifier = "SaveBarItem"
         
         self.displayManager.delegate = self
         
