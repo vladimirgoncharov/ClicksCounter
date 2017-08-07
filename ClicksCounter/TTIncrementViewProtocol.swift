@@ -8,8 +8,12 @@
 
 import UIKit
 
+/// Protocol for implementation Increment UIViewController
 protocol TTIncrementViewProtocol: NSObjectProtocol {
     var presenter: TTIncrementPresenterProtocol! { get set }
     
+    /// When the presenter is calling the method, you should update your UI with the number of clicks
+    ///
+    /// - Parameter value: New value of clicks count
     func setClicks(value: Int)
 }

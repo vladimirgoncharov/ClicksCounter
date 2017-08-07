@@ -45,6 +45,7 @@ class TTClicksCounterService: NSObject, TTClicksCounterServiceProtocol {
 
 //MARK:- Private
 fileprivate extension TTClicksCounterService {
+    /// internal save method
     func save() {
         do {
             try self.storeService.save(numberOfClicks: self.clicksCount)

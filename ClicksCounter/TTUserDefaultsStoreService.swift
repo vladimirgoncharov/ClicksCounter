@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// The service save data to UserDefaults
 class TTUserDefaultsStoreService: NSObject, TTStoreServiceProtocol {
     
     //MARK:- parameters
@@ -18,7 +19,7 @@ class TTUserDefaultsStoreService: NSObject, TTStoreServiceProtocol {
         super.init()
     }
     
-    //MARK:- Clicks
+    //MARK:- Number of clicks
     func save(numberOfClicks: Int) throws {
         self.userDefaults.setValue(numberOfClicks, forKey: Key.NumberOfClicks.value)
         self.userDefaults.synchronize()
@@ -43,7 +44,7 @@ class TTUserDefaultsStoreService: NSObject, TTStoreServiceProtocol {
         return nil
     }
     
-    //MARK:- Helpers
+    //MARK:- Managing storage
     func dropData() {
         Key.allCases().forEach { [unowned self] in
             self.userDefaults.removeObject(forKey: $0.value)

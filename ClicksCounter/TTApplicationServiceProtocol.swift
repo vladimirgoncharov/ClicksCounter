@@ -8,10 +8,10 @@
 
 import UIKit
 
+/// Proxy object to handle UIApplicationDelegate
 protocol TTApplicationServiceProtocol: NSObjectProtocol {
     
     var modulePresenter: TTModulePresenterProtocol { get }
-    
     var window: UIWindow? { get set }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool

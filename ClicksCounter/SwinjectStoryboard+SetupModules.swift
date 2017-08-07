@@ -11,6 +11,7 @@ import SwinjectStoryboard
 
 extension SwinjectStoryboard {
     
+    /// Setup DI for TTIncrement module
     class func setupIncrementModule() {
         self.defaultContainer.register(TTIncrementPresenterProtocol.self) { r in
             let clicksCounterService = r.resolve(TTClicksCounterServiceProtocol.self)!
@@ -22,6 +23,7 @@ extension SwinjectStoryboard {
         }
     }
     
+    /// Setup DI for TTSettings module
     class func setupSettingsModule() {
         self.defaultContainer.register(TTSettingsPresenterProtocol.self) { r in
             let clicksCounterService = r.resolve(TTClicksCounterServiceProtocol.self)!

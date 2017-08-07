@@ -15,6 +15,7 @@ class TTSettingsModuleTests: XCTestCase, TTBaseModuleProtocol {
     typealias View = TTSettingsView
     
     var view: View!
+    var modulePresenter: TTModulePresenterProtocol!
     
     //MARK:-
     override func setUp() {
