@@ -17,30 +17,9 @@ extension XCUIApplication {
     }
 }
 
-extension XCUIElement {
-    /**
-     Removes any current text in the field before typing in the new value
-     - Parameter text: the text to enter into the field
-     */
-    func clearAndEnterText(text: String, for app: XCUIApplication) {
-        self.forceTapElement()
-        if let stringValue = self.value as? String {
-            let deleteString = stringValue.characters.map { _ in XCUIKeyboardKeyDelete }.joined(separator: "")
-            self.typeText(deleteString)
-        }
-        self.typeText(text)
-    }
-}
-
-extension XCUIElement {
+extension XCUIApplication {
     
-    func forceTapElement() {
-        if self.isHittable {
-            self.tap()
-        }
-        else {
-            let coordinate: XCUICoordinate = self.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5))
-            coordinate.tap()
-        }
+    func clickBackButtonItem() {
+        self.navigationBars.buttons.element(boundBy: 0).tap()
     }
 }
